@@ -10,7 +10,7 @@
 2. cocapods 添加  <code>pod 'XYWAppVersionHelper'</code>
 
 ### 示例代码
-<code>
+<pre><code>
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     ApplaunchType type = [XYWAppVersionHelper appThislaunchType];
@@ -32,4 +32,4 @@
     }
     return YES;
 }
-</code>
+</code></pre>
