@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, ApplaunchType) {
     ApplaunchTypeAfterInstallFirstLabch,
     ApplaunchTypeVersionFallback,
 };
-@interface XYWVersonManager : NSObject
+@interface XYWAppVersionHelper : NSObject
 
 /**
  float 上次启动时的版本号 ／ Version number of last launch

@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851540081EC5897D001ABB6A /* XYWAppVersionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 851540071EC5897D001ABB6A /* XYWAppVersionHelper.m */; };
 		8538376F1EC55F520075D052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8538376E1EC55F520075D052 /* main.m */; };
 		853837721EC55F520075D052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 853837711EC55F520075D052 /* AppDelegate.m */; };
 		853837751EC55F520075D052 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853837741EC55F520075D052 /* ViewController.m */; };
 		853837781EC55F520075D052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853837761EC55F520075D052 /* Main.storyboard */; };
 		8538377A1EC55F520075D052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853837791EC55F520075D052 /* Assets.xcassets */; };
 		8538377D1EC55F520075D052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8538377B1EC55F520075D052 /* LaunchScreen.storyboard */; };
-		853837871EC55F610075D052 /* XYWVersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 853837861EC55F610075D052 /* XYWVersonManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851540061EC5897D001ABB6A /* XYWAppVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWAppVersionHelper.h; sourceTree = "<group>"; };
+		851540071EC5897D001ABB6A /* XYWAppVersionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWAppVersionHelper.m; sourceTree = "<group>"; };
 		8538376A1EC55F510075D052 /* XYWAppVersionHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYWAppVersionHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8538376E1EC55F520075D052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		853837701EC55F520075D052 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		853837791EC55F520075D052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8538377C1EC55F520075D052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8538377E1EC55F520075D052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		853837851EC55F610075D052 /* XYWVersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWVersonManager.h; sourceTree = "<group>"; };
-		853837861EC55F610075D052 /* XYWVersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWVersonManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851540051EC5897D001ABB6A /* XYWAppVersionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				851540061EC5897D001ABB6A /* XYWAppVersionHelper.h */,
+				851540071EC5897D001ABB6A /* XYWAppVersionHelper.m */,
+			);
+			path = XYWAppVersionHelper;
+			sourceTree = "<group>";
+		};
 		853837611EC55F510075D052 = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +70,7 @@
 		8538376C1EC55F520075D052 /* XYWAppVersionHelper */ = {
 			isa = PBXGroup;
 			children = (
-				853837841EC55F610075D052 /* XYWVersionManager */,
+				851540051EC5897D001ABB6A /* XYWAppVersionHelper */,
 				853837701EC55F520075D052 /* AppDelegate.h */,
 				853837711EC55F520075D052 /* AppDelegate.m */,
 				853837731EC55F520075D052 /* ViewController.h */,
@@ -81,15 +90,6 @@
 				8538376E1EC55F520075D052 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		853837841EC55F610075D052 /* XYWVersionManager */ = {
-			isa = PBXGroup;
-			children = (
-				853837851EC55F610075D052 /* XYWVersonManager.h */,
-				853837861EC55F610075D052 /* XYWVersonManager.m */,
-			);
-			path = XYWVersionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +123,8 @@
 				TargetAttributes = {
 					853837691EC55F510075D052 = {
 						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 9H9Y2TUHE4;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -164,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				853837751EC55F520075D052 /* ViewController.m in Sources */,
-				853837871EC55F610075D052 /* XYWVersonManager.m in Sources */,
+				851540081EC5897D001ABB6A /* XYWAppVersionHelper.m in Sources */,
 				853837721EC55F520075D052 /* AppDelegate.m in Sources */,
 				8538376F1EC55F520075D052 /* main.m in Sources */,
 			);
@@ -287,14 +288,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H9Y2TUHE4;
 				INFOPLIST_FILE = XYWAppVersionHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XYWAppVersionHelper.dramUnited.ltd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3e768aec-1f08-4175-97e8-fde129e89d73";
+				PROVISIONING_PROFILE_SPECIFIER = AllCanUse;
 			};
 			name = Debug;
 		};
@@ -303,14 +304,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H9Y2TUHE4;
 				INFOPLIST_FILE = XYWAppVersionHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XYWAppVersionHelper.dramUnited.ltd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3e768aec-1f08-4175-97e8-fde129e89d73";
+				PROVISIONING_PROFILE_SPECIFIER = AllCanUse;
 			};
 			name = Release;
 		};
@@ -333,6 +334,7 @@
 				853837831EC55F520075D052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

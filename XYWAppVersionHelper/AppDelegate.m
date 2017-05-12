@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "XYWVersonManager.h"
+#import "XYWAppVersionHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ApplaunchType type = [XYWVersonManager appThislaunchType];
+    ApplaunchType type = [XYWAppVersionHelper appThislaunchType];
     switch (type) {
         case ApplaunchTypeNormal:
             NSLog(@"正常启动");

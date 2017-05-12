@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XYWAppVersionHelper"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of XYWAppVersionHelper."
+  s.version      = "1.0.0"
+  s.summary      = "XYWAppVersionHelper is a helper class  -bad english"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                          a version manager,if you want to do something when app lanuch ,first launch this version,first launch after install.
                    DESC
 
   s.homepage     = "https://github.com/xueyongwei/XYWAppVersionHelper"
@@ -90,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "XYWAppVersionHelper", "XYWAppVersionHelper/XYWVersionManager/*.{h,m}"
+  s.source_files  = "XYWAppVersionHelper/XYWVersionManager/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

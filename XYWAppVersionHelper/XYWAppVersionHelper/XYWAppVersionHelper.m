@@ -6,8 +6,8 @@
 //  Copyright © 2017年 xueyognwei. All rights reserved.
 //
 
-#import "XYWVersonManager.h"
-@implementation XYWVersonManager
+#import "XYWAppVersionHelper.h"
+@implementation XYWAppVersionHelper
 
 /**
  float 上次启动时的版本号 ／ Version number of last launch
