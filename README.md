@@ -6,5 +6,5 @@
 3. 版本升级
 
 ### 使用方法
-1.直接下载拖入文件夹到工程
-2.cocapods 添加  <code>pod 'XYWAppVersionHelper~'</code>
+1. 直接下载拖入文件夹到工程
+2. cocapods 添加  <code>pod 'XYWAppVersionHelper~'</code>
