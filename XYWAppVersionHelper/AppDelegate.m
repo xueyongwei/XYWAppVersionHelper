@@ -31,7 +31,8 @@
         default:
             break;
     }
-    NSLog(@"%f",[XYWAppVersionHelper shareHelper].currentVersion);
+    NSLog(@"上次启动时的版本号%f",[XYWAppVersionHelper shareHelper].currentVersion);
+    NSLog(@"当前版本号%f",[XYWAppVersionHelper shareHelper].currentVersion);
     return YES;
 }
 
