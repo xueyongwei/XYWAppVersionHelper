@@ -1,5 +1,5 @@
 //
-//  XYWVersonManager.m
+//  XYWVersonHelper.m
 //  downloader
 //
 //  Created by xueyognwei on 2017/5/2.
@@ -9,56 +9,39 @@
 #import "XYWAppVersionHelper.h"
 @implementation XYWAppVersionHelper
 
-/**
- float 上次启动时的版本号 ／ Version number of last launch
- 
- @return float 类型的版本号，便于比较 / a float value
- */
-+(float)lastVersionInter{
-    float lastVersionInter = [[NSUserDefaults standardUserDefaults] floatForKey:@"currentAppVersionIntegerValue"];
-    if (lastVersionInter&&lastVersionInter>0) {
-        return lastVersionInter;
-    }else{
-        return 0;
-    }
++(instancetype)shareHelper
+{
+    static XYWAppVersionHelper *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc]init];
+        [sharedInstance appDidFinishLaunch];
+    });
+    return sharedInstance;
 }
 
-/**
- 本次APP启动类型 / This APP launch type
-
-
- @return 启动类型 / launch type
- */
-+(ApplaunchType)appThislaunchType{
-    float lastVersion = [self lastVersionInter];
-    float currentVersion = [self currentVersionInter];
-    if (lastVersion==0) {
-        return ApplaunchTypeAfterInstallFirstLabch;
-    }else if (currentVersion > lastVersion){
-        return ApplaunchTypeThisVersionFirstLabch;
-    }else if (currentVersion < lastVersion){
-        return ApplaunchTypeVersionFallback;
-    }else {
-        return ApplaunchTypeNormal;
-    }
-}
-
-
-/**
- float 本次启动时的版本号 ／ Version number of this launch
- 
- @return float 类型的版本号，便于比较 / a float value
- */
-+(float)currentVersionInter{
+-(void)appDidFinishLaunch{
+    NSUserDefaults *usf = [NSUserDefaults standardUserDefaults];
+    float lastVersionInter = [usf floatForKey:@"lastAppVersionIntegerValue"];
+    //取本次启动时app的版本
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     NSRange dotrange = [version rangeOfString:@"."];
     NSString *bigVersion = [version substringToIndex:dotrange.location];
     NSString *smallVersion = [version substringFromIndex:dotrange.location+dotrange.length];
-    
-    NSUserDefaults *usf = [NSUserDefaults standardUserDefaults];
     float currentVersion = bigVersion.integerValue*100+smallVersion.floatValue;
-    [usf setFloat:currentVersion forKey:@"currentAppVersionIntegerValue"];
-    return currentVersion;
+    self.currentVersion = currentVersion;
+    [usf setFloat:currentVersion forKey:@"lastAppVersionIntegerValue"];
+    [usf synchronize];
+    if (lastVersionInter>0) {//已有版本记录，启动过
+        self.lastVersion = lastVersionInter;
+        if (currentVersion != lastVersionInter) {//版本不同
+            self.lunchType = XYWVersonHelperLunchTypeFirstLuchThisVersion;
+        }else{
+            self.lunchType = XYWVersonHelperLunchTypeNormal;
+        }
+    }else{//没有记录，安装后第一次启动
+        self.lastVersion = currentVersion;
+        self.lunchType = XYWVersonHelperLunchTypeFirstLuchAfterInstall;
+    }
 }
-
 @end
