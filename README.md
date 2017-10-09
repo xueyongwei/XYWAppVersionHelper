@@ -13,23 +13,21 @@
 <pre><code>
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ApplaunchType type = [XYWAppVersionHelper appThislaunchType];
+    XYWVersonHelperLunchType type = [XYWAppVersionHelper shareHelper].lunchType;
     switch (type) {
-        case ApplaunchTypeNormal:
+        case XYWVersonHelperLunchTypeNormal:
             NSLog(@"正常启动");
             break;
-        case ApplaunchTypeThisVersionFirstLabch:
+        case XYWVersonHelperLunchTypeFirstLuchThisVersion:
             NSLog(@"新版本启动");
             break;
-        case ApplaunchTypeAfterInstallFirstLabch:
+        case XYWVersonHelperLunchTypeFirstLuchAfterInstall:
             NSLog(@"安装后第一次启动");
-            break;
-        case ApplaunchTypeVersionFallback:
-            NSLog(@"版本回退了！");
             break;
         default:
             break;
     }
+    NSLog(@"%f",[XYWAppVersionHelper shareHelper].currentVersion);
     return YES;
 }
 </code></pre>
