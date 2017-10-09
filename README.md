@@ -1,5 +1,5 @@
 # XYWAppVersionHelper
-
+⚠️注意，仅支持最多3段数字类型的版本号,且第二段不大于100（eg，1、3.0、5.1.5、10.88.666）
 ### 使用场景
 1. 应用版本兼容问题
 2. 启动广告显示
@@ -8,7 +8,6 @@
 ### 使用方法
 1. 直接下载拖入文件夹到工程
 2. cocapods 添加  <code>pod 'XYWAppVersionHelper'</code>
-### ⚠️注意，仅支持最多3段数字类型的版本号,且第二段不大于100（eg，1、3.0、5.1.5、10.88.666）
 ### 示例代码
 <pre><code>
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
